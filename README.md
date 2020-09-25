@@ -23,8 +23,7 @@ Flask (Python)
 ## Screenshots
 
 ![alt text](https://github.com/Scorpi35/Flask-Emotion-Detection/blob/master/images/Screen%20Shot%202020-09-25%20at%2016.49.58.png)
-
-
+![alt text](https://github.com/Scorpi35/Flask-Emotion-Detection/blob/master/images/Screen%20Shot%202020-09-25%20at%2017.19.59.png)
 
 
 
