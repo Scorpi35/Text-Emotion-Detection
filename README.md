@@ -13,6 +13,16 @@ This project aims to detect emotions from messages.
 Flask (Python)
 
 ## Algorithm
+1. Pre-processing Dataset
+2. Tokenization
+3. Generate word embeddings
+4. Training LSTM Model with bidirectional layers
+
+## Results
+
+## Screenshots
+
+![alt text](https://github.com/Scorpi35/Flask-Emotion-Detection/blob/master/images/Screen%20Shot%202020-09-25%20at%2016.49.58.png)
 
 
 
