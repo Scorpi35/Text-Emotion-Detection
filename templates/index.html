@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Message Emotion Detection</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <div class="header_container">
+    <h1>Welcome to <b>Emotion Detection Messenger</b></h1>
+  </div>
+  <div class="description_container">
+    <center>
+      This project is done for the educational and research purposes.<br/>
+      There is no diclaimer regarding the project and is completely open source <br/>
+      to those who are interested in contrbuting.<br/><br/>
+      <b style="color: black">This project intends to evaluate emotions in messages and <br/>
+      informs the receiver about the sender's emotion.</b>
+    </center>
+  </div>
+  <div class="redirect_algo_container">
+    <div class="algo_container">
+      <div class="algo_header_container">
+        Project Description
+      </div>
+      <div class="algo_description_container">
+        
+        <div class="description_box">
+          <center>
+            <header>Platform</header>
+            <desc>Python, Flask</desc>
+          </center>
+        </div>
+
+        <div class="description_box">
+          <center>
+            <header>Dataset</header>
+            <desc>
+              <a href="https://www.kaggle.com/shrivastava/isears-dataset">ISEAR Dataset (7667 rows)</a>
+            </desc>
+            
+          </center>
+        </div>
+
+        <div class="description_box">
+          <center>
+            <header>Algorithm/Model</header>
+            <desc>Word Tokenizer, Sequential Model</desc>
+          </center>
+        </div>
+
+        <div class="description_box">
+          <center>
+            <header>Github</header>
+            <desc>
+              <a href="https://github.com/Scorpi35/Message_Emotion_Detector">
+                Go to the link
+              </a>
+            </desc>
+          </center>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="redirect_container">
+      <div class="future_extension_container">
+        <div class="future_header">
+          Future Extension
+        </div>
+        <div class="future_desc">
+          <center>
+            Integration of <b>Plutchik's Wheel of Emotions</b><br/><br/>
+            Analyzing <b>context of conversation</b><br/><br/>
+            Introducing <b>time</b> feature
+          </center>
+        </div>
+      </div>
+      <div class="check_out_container">
+        <form action="/" method="POST">
+          <input type="submit" value="Check Out Messenger" class="redirect_button"/>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

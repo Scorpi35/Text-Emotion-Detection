@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--link rel="stylesheet" href="{{ url_for('static', filename='css/message.css') }}" -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <title>Document</title>
+</head>
+<body>
+  <section class="section">
+    <div class="container" style="text-align: center;">
+      <h1 class="title" style="color: #3498DB; font-family: sans-serif; font-weight: lighter;">Emotion Detection Messenger</h1>
+    </div>
+
+    <div class="cotnainer" style="position: relative; text-align: center; margin-top: 20px;">
+      <form action="/reset" method="POST">
+        <input type="submit" value="RESET" style="height: 50px; width: 100px; border-radius: 10px;"/>
+      </form>
+      <form action="/go_back" method="POST">
+        <input type="submit" value="GO BACK"/>
+      </form>
+    </div>
+
+    <div class="container">
+      <div class="columns" style="margin-top: 50px;">
+
+        <div class="column" style="text-align: center;">
+          <div class="container" id="person1_container" 
+          style="display: flex; 
+          justify-content: center; 
+          align-items: center;
+          font-size: 20px;
+          font-family: Trebuchet MS;
+          color: #3498DB;
+          ">
+            Person 1
+          </div>
+
+          <div class="container" style="height: 300px; overflow-y:auto; border-radius: 10px; border-color: colar; border-style: solid;">
+            {% for message in all_messages %}
+              <br/>
+              <div class="container" style="height: auto; width: 100%; overflow: hidden">
+                
+                {% if message.sender % 2 == 0 %}
+                  <div class="message_container" style="position: relative; padding: 2%; height: auto; width: 40%; background-color: #E8ECF0; float: left; margin-left: 5%; border-radius: 20px; color: black;">
+                    {{ message.message }}
+                  </div>
+                {% endif %}
+        
+                {% if message.sender % 2 != 0 %}
+                  <div class="message_container" style="position: relative; padding: 2%; height: auto; width: 40%; background-color: #3498DB; float: right; margin-right: 5%; border-radius: 20px; color: white;">
+                    {{ message.message }}
+                  </div>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+
+          <br/>
+          <div class="container">
+            <form action="/message" method="POST">
+              <textarea name="message" id="message_1" rows="4" cols="50" placeholder="Write a message..." style="width: 100%;" required ></textarea><br/>
+              <input type="hidden" value=1 name="sender" id="sender_1"/>
+              <input type="submit" value="send" style="float: right">
+            </form>
+          </div><br />
+
+          <div class="container">
+            <b>Emotion of 'Person 2'</b><br/>
+            {{ emotion_2 }}<br/>
+          </div>
+
+        </div>
+
+        <div class="column" style="text-align: center;">
+          <div 
+          class="container" 
+          id="person1_container" 
+          style="display: flex; 
+          justify-content: center; 
+          align-items: center;
+          font-size: 20px;
+          font-family: Trebuchet MS;
+          color: #3498DB;
+          ">
+            Person 2
+          </div>
+
+          <div class="container" style="height: 300px; overflow-y:auto; border-radius: 10px; border-color: colar; border-style: solid;">
+            {% for message in all_messages %}
+              <br/>
+              <div class="container" style="height: auto; width: 100%; overflow: hidden">
+                
+                {% if message.sender % 2 == 0 %}
+                  <div class="message_container" style="position: relative; padding: 2%; height: auto; width: 40%; background-color: #3498DB; float: right; margin-right: 5%; border-radius: 20px; color: white;">
+                    {{ message.message }}
+                  </div>
+                {% endif %}
+        
+                {% if message.sender % 2 != 0 %}
+                  <div class="message_container" style="position: relative; padding: 2%; height: auto; width: 40%; background-color: #E8ECF0; float: left; margin-left: 5%; border-radius: 20px; color: black;">
+                    {{ message.message }}
+                  </div>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+
+          <br/>
+          <div class="container">
+            <form action="/message" method="POST">
+              <textarea name="message" id="message_2" rows="4" cols="50" placeholder="Write a message..." style="width: 100%;" required ></textarea><br/>
+              <input type="hidden" value=2 name="sender" id="sender_2"/>
+              <input type="submit" value="send" style="float: right;">
+            </form>
+          </div><br/>
+
+          <div class="container">
+            <b>Emotion of 'Person 1'</b><br/>
+            {{ emotion_1 }}<br/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
