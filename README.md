@@ -1,9 +1,6 @@
 # Message Emotion Detection
 
-### Language
-Python
-
-### Web Framework
-Flask
+## Project Details
+This project aims to detect emotions from messages. 
 
 
