@@ -29,7 +29,6 @@ numpy==1.18.5
 oauthlib==3.1.0
 opt-einsum==3.3.0
 pipenv==2020.8.13
-post==1.0.2
 protobuf==3.13.0
 public==1.0.3
 pyasn1==0.4.8
