@@ -12,11 +12,18 @@ This project aims to detect emotions from messages.
 ## Framework
 Flask (Python)
 
-## Algorithm
+## Algoritm
 1. Pre-processing Dataset
 2. Tokenization
 3. Generate word embeddings
 4. Training LSTM Model with bidirectional layers
+
+## Model Training Description
+* Layers:- 1 Embedding layer, 3 Bidirectional layers, 2 Dense layers
+* Optimizer:- Adam
+* Epoch:- 150
+* Batch Size:- 120
+* Validation Split:- 0.2
 
 ## Results
 
